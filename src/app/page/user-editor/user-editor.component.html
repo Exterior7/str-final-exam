@@ -11,7 +11,7 @@
         type="text"
         name="name"
         [(ngModel)]="user.name" pattern=".{8,40}" required #userName="ngModel">
-        <small [hidden]="userName.valid" id="nameHelp" class="form-text text-muted">A név kitöltése kötelező, legalább 8, maximum 40 karakter!</small>
+        <small [hidden]="userName.valid" id="nameHelp" class="alert alert-danger form-text text-muted">A név kitöltése kötelező, legalább 8, maximum 40 karakter!</small>
       </div>
       <div class="form-group">
         <label>Email</label>
@@ -22,7 +22,7 @@
           type="text"
           name="email"
           [(ngModel)]="user.email" pattern="[\w-\.]+@([\w-]+\.)+[\w-]{2,4}" required #userEmail="ngModel">
-          <small [hidden]="userEmail.valid" id="emailHelp" class="form-text text-muted">Az email kitöltése kötelező! Létező email címet adj meg!</small>
+          <small [hidden]="userEmail.valid" id="emailHelp" class="alert alert-danger form-text text-muted">Az email kitöltése kötelező! Létező email címet adj meg!</small>
         </div>
         <div class="form-group">
           <label>Address</label>
@@ -32,7 +32,7 @@
           type="text"
           name="address"
           [(ngModel)]="user.address" pattern=".{8,100}" required #userAddress="ngModel">
-          <small [hidden]="userAddress.valid" id="addressHelp" class="form-text text-muted">A cím kitöltése kötelező! Minimum 8 karakter, maximum 100 karakter lehet!</small>
+          <small [hidden]="userAddress.valid" id="addressHelp" class="alert alert-danger form-text text-muted">A cím kitöltése kötelező! Minimum 8 karakter, maximum 100 karakter lehet!</small>
       </div>
       <div class="form-group">
         <label>Active</label>
