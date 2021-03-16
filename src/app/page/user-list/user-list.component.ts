@@ -45,7 +45,10 @@ onColumnSelect(key: string): void {
 
 
   onDelete(user: User):void {
-    this.userService.remove(user);
+    let approve = confirm ("Biztosan törölni akarja?")
+    if (approve == true) {
+      this.userService.remove(user);
+    }
   }
 
 }

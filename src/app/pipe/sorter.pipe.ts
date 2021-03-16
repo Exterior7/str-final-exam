@@ -7,7 +7,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class SorterPipe implements PipeTransform {
   transform(value: any[] | null, key: string): any[] | null {
     if (!Array.isArray(value) || !key) {
-      return null;
+      return value;
     }
     return value.sort((a, b) => {
       if (typeof a[key] === 'number' && b[key] === 'number') {
