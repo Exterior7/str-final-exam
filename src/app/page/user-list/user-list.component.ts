@@ -25,8 +25,8 @@ export class UserListComponent implements OnInit {
   ngOnInit(): void {
   }
 
-onChangePhrase(user: User):void {
-  this.phrase = (user.target as HTMLInputElement).value;
+onChangePhrase(event: Event):void {
+  this.phrase = (event.target as HTMLInputElement).value;
 }
 
 onColumnSelect(key: string): void {
