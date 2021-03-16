@@ -16,7 +16,7 @@ import { FilterPipe } from './pipe/filter.pipe';
     NavbarComponent,
     UserListComponent,
     UserEditorComponent,
-    FilterPipe
+    FilterPipe,
   ],
   imports: [
     BrowserModule,
