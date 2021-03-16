@@ -12,12 +12,18 @@ export class UserListComponent implements OnInit {
 
   users$: Observable<User[]> = this.userService.getAll();
 
+  phrase: string = "";
+
   constructor(
     private userService: UserService,
   ) { }
 
   ngOnInit(): void {
   }
+
+onChangePhrase(user: User):void {
+  this.phrase = (user.target as HTMLInputElement).value;
+}
 
   onDelete(user: User):void {
     this.userService.remove(user);
